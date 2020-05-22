@@ -2,7 +2,7 @@
   "ReRoutes": [
     {
       "DownstreamPathTemplate": "/HealthAndWelfare/{catchAll}",
-      "DownstreamScheme":  "https",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
@@ -21,6 +21,45 @@
         }
       ],
       "UpstreamPathTemplate": "/billing-api/{catchAll}"
+    },
+    {
+      "DownstreamPathTemplate": "/HealthAndWelfare/Users/{catchAll}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5020
+        }
+      ],
+      "UpstreamPathTemplate": "/health-api/Users/{catchAll}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "GetUser"
+    },
+    {
+      "DownstreamPathTemplate": "/Billing/Clients/{catchAll}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5010
+        }
+      ],
+      "UpstreamPathTemplate": "/billing-api/Clients/{catchAll}",
+      "UpstreamHttpMethod": [
+        "Get"
+      ],
+      "Key": "GetClient"
+    }
+  ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "GetUser",
+        "GetClient"
+      ],
+      "UpstreamPathTemplate": "/api/getUserAndClientInfo/{catchAll}"
     }
   ],
   "GlobalConfiguration": {
