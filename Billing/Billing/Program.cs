@@ -1,6 +1,7 @@
 ﻿namespace Billing
 {
     using System;
+    using Billing.Persistence;
     using Microsoft.AspNetCore;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.EntityFrameworkCore;

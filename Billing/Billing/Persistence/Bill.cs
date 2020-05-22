@@ -1,4 +1,4 @@
-﻿namespace Billing
+﻿namespace Billing.Persistence
 {
     using System;
 

@@ -1,4 +1,4 @@
-﻿namespace Billing
+﻿namespace Billing.Persistence
 {
     using Microsoft.EntityFrameworkCore;
 
@@ -10,5 +10,7 @@
         }
 
         public DbSet<Bill> Bills { get; set; }
+
+        public DbSet<Client> Clients { get; set; }
     }
 }
