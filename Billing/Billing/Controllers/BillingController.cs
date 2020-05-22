@@ -5,7 +5,7 @@
     using System.Linq;
 
     [Route("Bills")]
-    public class BillingController : Controller
+    public class BillingController : ControllerBase
     {
         private readonly Context context;
 
@@ -14,8 +14,8 @@
             this.context = context;
         }
 
-        [HttpGet("Get")]
-        public IEnumerable<Bill> GetBills()
+        [HttpGet]
+        public ActionResult<IEnumerable<Bill>> GetBills()
         {
             return this.context.Bills.ToList();
         }
