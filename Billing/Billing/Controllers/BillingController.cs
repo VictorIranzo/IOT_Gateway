@@ -6,7 +6,7 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    [Route("Bills")]
+    [Route("Billing/Bills")]
     public class BillingController : ControllerBase
     {
         private readonly Context context;

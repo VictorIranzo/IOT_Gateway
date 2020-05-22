@@ -8,7 +8,7 @@
     using Microsoft.EntityFrameworkCore;
     using HealthAndWelfare.Persistence;
 
-    [Route("Treatments")]
+    [Route("HealthAndWelfare/Treatments")]
     [ApiController]
     public class TreatmentController : ControllerBase
     {
