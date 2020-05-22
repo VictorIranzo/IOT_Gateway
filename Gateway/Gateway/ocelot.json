@@ -1,7 +1,7 @@
 {
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "HealthAndWelfare/{catchAll}",
+      "DownstreamPathTemplate": "/HealthAndWelfare/{catchAll}",
       "DownstreamScheme":  "https",
       "DownstreamHostAndPorts": [
         {
@@ -9,10 +9,10 @@
           "Port": 5020
         }
       ],
-      "UpstreamPathTemplate": "health-api/{catchAll}"
+      "UpstreamPathTemplate": "/health-api/{catchAll}"
     },
     {
-      "DownstreamPathTemplate": "Billing/{catchAll}",
+      "DownstreamPathTemplate": "/Billing/{catchAll}",
       "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
@@ -20,7 +20,7 @@
           "Port": 5010
         }
       ],
-      "UpstreamPathTemplate": "billing-api/{catchAll}"
+      "UpstreamPathTemplate": "/billing-api/{catchAll}"
     }
   ],
   "GlobalConfiguration": {

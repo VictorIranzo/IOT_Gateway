@@ -31,7 +31,7 @@
             app.UseHttpsRedirection();
             app.UseMvc();
 
-            app.UseOcelot();
+            app.UseOcelot().Wait();
         }
     }
 }
