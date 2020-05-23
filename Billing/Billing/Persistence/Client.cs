@@ -10,5 +10,9 @@ namespace Billing.Persistence
         public Guid Id { get; set; }
 
         public string Name { get; set; }
+
+        public string IBAN { get; set; }
+
+        public string BankingEntity { get; set; }
     }
 }
