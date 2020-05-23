@@ -20,7 +20,14 @@
           "Port": 5010
         }
       ],
-      "UpstreamPathTemplate": "/billing-api/{catchAll}"
+      "UpstreamPathTemplate": "/billing-api/{catchAll}",
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": true,
+        "Period": "10s",
+        "PeriodTimespan": 1,
+        "Limit": 1
+      }
     },
     {
       "DownstreamPathTemplate": "/HealthAndWelfare/Users/{catchAll}",
